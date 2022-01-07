@@ -55,7 +55,33 @@
   
 }
 
+.select-item{
+    color: rgba(245, 245, 245, 0.89);
+    text-align: center;
+    border-bottom: solid 2px rgba(255, 255, 255, 0.5);
+    width: 80%;
+    margin: auto;
+    margin-top: 10px;
+    z-index: 0;
+    cursor: pointer;
+    border-radius: 20px;
+}
+.match-list-container{
+    margin-top: 120px;
+}
+.select-item:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+    color: blue;
 
+}
+.city-name{
+    color: #4B68FF;
+    text-align: center;
+    top: 30px;
+    position: relative;
+    font-size: 40px;
+    font-weight: 600;
+}
 .logo{
     width: 128px;
     margin-left: 12px;

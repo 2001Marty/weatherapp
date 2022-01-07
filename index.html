@@ -11,10 +11,21 @@
     <div class="app-container">
         <div class="nav-container">
             <h1>MetoStats</h1>
-            <input class="select-input" type="text" placeholder="vyber město">
+            <input 
+                id="search" 
+                class="select-input" 
+                type="text" 
+                placeholder="vyber město"
+                type="text"
+                autocomplete="off"
+            >
+            <div class="match-list-container" id="match-list"></div>
         </div>
-        <div class="main-container"></div>
+        <div class="main-container">
+            <h1 class="city-name" id="city-name">Olomouc</h1>
+        </div>
         <div class="footer"></div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
