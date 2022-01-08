@@ -12,13 +12,19 @@
     text-decoration: none;
     font-family: Roboto;
     font-style: normal;
+ 
   
+}
+.app-container{
+    height: fit-content;
+    
 }
 
 .nav-container{
     background-color: var(--blue);
     width: fit-content; 
-    height: 150vh;
+    min-height: 170vh;
+    height:auto;
     float: left;
     display: block;
     animation: .75s ease-out 0s 1 slideInFromLeft;
@@ -81,7 +87,6 @@
 }
 
 
-
 .city-name{
     color: #4B68FF;
     text-align: center;
@@ -92,7 +97,7 @@
 }
 
 .weather-stats{
-    margin-top: 100px;
+    margin-top: 50px;
     display: flex;
     flex-wrap: wrap;
     row-gap: 50px;  
@@ -100,15 +105,12 @@
     justify-content: center;
 
 
-}
-.main-container{
 
 }
-
 
 .day-card-container{
+   
     animation: 1s ease-out 0s 1 slideInFromRight;
-  
     width: 20vw;
     background-color:var(--blue);
     text-align: center;
@@ -117,22 +119,73 @@
     box-shadow: 4.0px 8.0px 8.0px hsl(0deg 0% 0% / 0.5);
   
 }
+.day-card-container:hover{   
+    margin-bottom: -3px;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.096);
+}
 .day-card-container > p{
     color: white;
     font-weight: bold;
-    text-align:center;
+    width: 200px;
+    text-align: left;
+    margin: 3px auto;
+    font-size: large;
+}
+
+.day-card-container > h2.day-name{
+    font-size: xx-large;
+    margin-top: 10px;
+}
+
+.weather-icon{
+    margin-top: -25px;
+}
+.day-card-container > p.desc{
+    text-align: center;
+    margin-top: -40px;
+    margin-bottom: 15px;
+ 
+    font-size: x-large;
 }
 .day-card-container > h2{
     color: white;
     font-weight: bold;
 }
 
-.logo{
-    width: 128px;
-    margin-left: 12px;
-    margin-top: 10px;
-    display: inline;
+
+.footer{
+  
+    clear: both;
+    position: relative;
+    height: 120px;
+    margin-top: -120px;
+    background-color: #4B68FF;
+    align-content: center;
+    overflow: hidden;
+    
 }
+
+.disclaimer{
+    display: block;
+    text-align: center;
+    color:white;
+    padding-top: 30px;
+    font-size: x-large;
+    transform: translateX(165.3px);
+}
+.api-disclaimer{
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+    font-style: italic;
+    font-family: Roboto Condensed;
+    text-decoration: underline;
+    transform: translateX(165.3px);
+}
+
 
 @keyframes slideInFromLeft {
     0% {
@@ -153,3 +206,5 @@
   
     }
 }
+
+

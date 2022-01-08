@@ -8,8 +8,6 @@ const days = ['Pondělí', 'Úterý', 'Středa', 'Čtvrtek', 'Pátek', 'Sobota',
 
 
 
-
-
 var active_city = {
     name: 'Olomouc',
     lat: 49.59552, 
@@ -34,8 +32,9 @@ const outputWeatherHtml = data => {
                 <img class="weather-icon" src=" http://openweathermap.org/img/wn/${day.weather[0].icon}@4x.png"  alt="${day.weather[0].description}">
                 <p class="desc">${capitalizeFirstLetter(day.weather[0].description)}</p>
                 <p class="max-temp">Denní teplota: ${Math.floor(day.temp.day)} °C</p>
-                <p class="min-temp">Noční tepolota: ${Math.floor(day.temp.night)} °C</p>
+                <p class="min-temp">Noční teplota: ${Math.floor(day.temp.night)} °C</p>
                 <p class="feels-like-temp">Pocitová teplota: ${Math.floor(day.feels_like.day)} °C</p>
+                <p class="precitipation">Vlhkost: ${Math.floor(day.humidity)} %</p>
                 <p class="wind-speed">Rychlost větru: ${Math.floor(day.wind_speed)} km/h</p>
             </div>
        `
