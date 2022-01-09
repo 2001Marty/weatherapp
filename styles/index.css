@@ -23,8 +23,8 @@
 .nav-container{
     background-color: var(--blue);
     width: fit-content; 
-    min-height: 170vh;
-    height:auto;
+ 
+    height: 170vh;
     float: left;
     display: block;
     animation: .75s ease-out 0s 1 slideInFromLeft;
@@ -32,7 +32,14 @@
  
     
 }
-
+.chart-container{
+   margin-bottom: 300px;
+   width: 50vw;
+   max-width: 600px;
+   margin: 125px auto;
+   transform: translateX(165.3px);
+   
+}
 .nav-container > h1{
     
     
@@ -88,7 +95,7 @@
 
 
 .city-name{
-    color: #4B68FF;
+    color: rgb(75, 104, 255);
     text-align: center;
     top: 30px;
     position: relative;
@@ -169,7 +176,7 @@
     display: block;
     text-align: center;
     color:white;
-    padding-top: 30px;
+    padding-top: 20px;
     font-size: x-large;
     transform: translateX(165.3px);
 }
@@ -178,7 +185,7 @@
     font-weight: bold;
     text-align: center;
     display: block;
-    margin-top: 5px;
+    margin-top: 10px;
     font-size: 14px;
     font-style: italic;
     font-family: Roboto Condensed;
@@ -186,6 +193,24 @@
     transform: translateX(165.3px);
 }
 
+.icon-disclaimer{
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+    font-family: Roboto Condensed;
+   
+    transform: translateX(165.3px);
+}
+
+.icon-disclaimer > a{
+    color: rgb(255, 255, 255, 0.9);
+    text-decoration: none;
+    font-style: italic;
+    text-decoration: underline;
+}
 
 @keyframes slideInFromLeft {
     0% {

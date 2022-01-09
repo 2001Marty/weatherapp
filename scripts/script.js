@@ -2,30 +2,32 @@ const search = document.getElementById('search');
 const match_list = document.getElementById('match-list');
 const city_name = document.getElementById('city-name');
 const weather_stats = document.getElementById('weather-stats');
-
 const APIkey = '237acc5a5da622a10304477e0a781034';
 const days = ['Pondělí', 'Úterý', 'Středa', 'Čtvrtek', 'Pátek', 'Sobota', 'Neděle'];
-
-
-
+var graph_labels = [];
+var graph_data = [];
+//default city
 var active_city = {
     name: 'Olomouc',
     lat: 49.59552, 
     lon: 17.251751,
 };
 
+//fetching weather
 const fetchWeather = async (lat, lon) => {
     const URL = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=metric&exclude={part,hourly,minutely}&lang=cz&appid=${APIkey}`;
     const res = await fetch(URL);
     const data = await res.json();
-    console.log(data);
     outputWeatherHtml(data);
-};
 
+};
+//building fetch output
 const outputWeatherHtml = data => {
     const html = data.daily.map((day, id) =>{
         if(id <= 4){
             let dt = new Date(day.dt * 1000);
+            graph_labels[id] = (days[dt.getDay()]);
+            graph_data[id] = (Math.floor(day.temp.day));
             return `
             <div class="day-card-container">
                 <h2 class="day-name">${days[dt.getDay()]} <small>${dt.toLocaleDateString()}</small></h4>
@@ -41,9 +43,11 @@ const outputWeatherHtml = data => {
         }
         
     }).join('');
+    tempChart.update();
     weather_stats.innerHTML= html;
 }
 
+//comparing search values and city names
 const searchCities = async searchText => {
     const res = await fetch('./data/city.list.json');
     const cities = await res.json();
@@ -63,7 +67,7 @@ const searchCities = async searchText => {
 
     outputHtml(matches.slice(0, 8));
 };
-
+//building autocomplate selection
 const outputHtml = matches => {
    
     if(matches.length > 0){
@@ -93,6 +97,6 @@ function setCity(name, lat, lon) {
     fetchWeather(active_city.lat, active_city.lon);
 }
 
-document.onload = fetchWeather(active_city.lat, active_city.lon);
+document.onload  = fetchWeather(active_city.lat, active_city.lon);
 
 search.addEventListener('input', () => searchCities(search.value));
