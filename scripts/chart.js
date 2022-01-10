@@ -1,13 +1,19 @@
 const ctx = document.getElementById('temp-chart').getContext('2d');
-console.log(graph_data);
+
 const data = {
     labels: graph_labels,
     datasets: [{
-      label: 'Průměrná teplot',
+      label: 'Denní teplot',
       backgroundColor: 'rgb(75, 104, 255)',
       borderColor: 'rgb(75, 104, 255)',
       data: graph_data,
-    }]
+    },
+    {
+        label: 'Večerní teplota',
+        backgroundColor: 'rgba(150, 150, 150, 1)',
+        borderColor: 'rgba(150, 150, 150, 1)',
+        data: graph_data_night,
+      }]
   };
 
 const config = {
@@ -32,6 +38,5 @@ const config = {
         }
     }
   };
-
 
 const tempChart = new Chart(ctx, config);

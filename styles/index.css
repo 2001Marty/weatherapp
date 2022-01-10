@@ -3,35 +3,28 @@
 
 :root {
     --blue: #4B68FF;
-
   }
-  
 
 *{
     margin: 0;
     text-decoration: none;
     font-family: Roboto;
     font-style: normal;
- 
-  
 }
 .app-container{
     height: fit-content;
-    
 }
 
 .nav-container{
     background-color: var(--blue);
     width: fit-content; 
- 
     height: 170vh;
     float: left;
     display: block;
     animation: .75s ease-out 0s 1 slideInFromLeft;
     justify-content: center;
- 
-    
 }
+
 .chart-container{
    margin-bottom: 300px;
    width: 50vw;
@@ -40,6 +33,7 @@
    transform: translateX(165.3px);
    
 }
+
 .nav-container > h1{
     
     
@@ -52,7 +46,6 @@
     letter-spacing: 0.095em;
     margin: 25px;
     color: #FFFFFF;
-   
 }
 
 .select-input{
@@ -60,16 +53,13 @@
     width: 270px;
     height: 40px;
     margin: 25px;
-
     margin-top: 40px;
-   
     border: none;
     border-radius: 15px;
     text-align: center;
     font-size: large;
     color: var(--blue);
     outline: none;
-    
 }
 
 .select-item{
@@ -87,12 +77,12 @@
 .match-list-container{
     margin-top: 10px;
 }
+
 .select-item:hover{
     background-color: rgba(255, 255, 255, 0.5);
     color: blue;
 
 }
-
 
 .city-name{
     color: rgb(75, 104, 255);
@@ -110,13 +100,9 @@
     row-gap: 50px;  
     gap: 50px;
     justify-content: center;
-
-
-
 }
 
 .day-card-container{
-   
     animation: 1s ease-out 0s 1 slideInFromRight;
     width: 20vw;
     background-color:var(--blue);
@@ -124,12 +110,13 @@
     padding: 15px;
     border-radius: 20px;
     box-shadow: 4.0px 8.0px 8.0px hsl(0deg 0% 0% / 0.5);
-  
 }
+
 .day-card-container:hover{   
     margin-bottom: -3px;
     border-bottom: 3px solid rgba(0, 0, 0, 0.096);
 }
+
 .day-card-container > p{
     color: white;
     font-weight: bold;
@@ -147,6 +134,7 @@
 .weather-icon{
     margin-top: -25px;
 }
+
 .day-card-container > p.desc{
     text-align: center;
     margin-top: -40px;
@@ -154,11 +142,11 @@
  
     font-size: x-large;
 }
+
 .day-card-container > h2{
     color: white;
     font-weight: bold;
 }
-
 
 .footer{
   
@@ -169,7 +157,6 @@
     background-color: #4B68FF;
     align-content: center;
     overflow: hidden;
-    
 }
 
 .disclaimer{
@@ -180,6 +167,7 @@
     font-size: x-large;
     transform: translateX(165.3px);
 }
+
 .api-disclaimer{
     color: white;
     font-weight: bold;
@@ -201,7 +189,6 @@
     margin-top: 5px;
     font-size: 14px;
     font-family: Roboto Condensed;
-   
     transform: translateX(165.3px);
 }
 
@@ -228,7 +215,6 @@
     }
     100% {
         transform: translateX(0);
-  
     }
 }
 
