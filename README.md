@@ -1,5 +1,8 @@
 
 # *MeteoStats*
+
+![Odkaz na web](https://jovial-jennings-d49889.netlify.app)
+
 **Popis**
 
 Jednoduchá webová aplikace pro předpověd počasí následujících 5 dní.
