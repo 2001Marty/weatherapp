@@ -1,7 +1,7 @@
 
 # *MeteoStats*
 
-![Odkaz na web](https://jovial-jennings-d49889.netlify.app)
+[Odkaz na web](https://jovial-jennings-d49889.netlify.app)
 
 **Popis**
 
