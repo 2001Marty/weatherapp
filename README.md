@@ -22,7 +22,7 @@ Jednoduchá webová aplikace pro předpověd počasí následujících 5 dní.
 
 ## Funkce
 
-- **5 karet pro předpověď počasí na následujících dní**
+- **5 karet pro předpověď počasí v následujících dnech**
     - denní, noční a pocitová teplota
     - obrázek s popiskem přepovědi
     - vlhkost, rychlost větru
@@ -32,7 +32,7 @@ Jednoduchá webová aplikace pro předpověd počasí následujících 5 dní.
     - graf je vytvořen pomocí javascriptové knihovny [*Chart.js*](https://www.chartjs.org)
 
 - **Textové pole pro výběr města**
-    - našptáváč který úkáže nejbližší výsledky k vyhledávanému pojmu
+    - našptáváč který ukáže nejbližší výsledky k vyhledávanému pojmu
 
 - **Geolokace**
     - pokud je poloha přístupná web zobrazí data k aktualní poloze
